@@ -1,5 +1,5 @@
 mercado = ["trigo", "acucar", "arroz", "feijao", "macarrao"]
-preco =  [19.98, 18.00, 23.30, 12.00, 6.99]
+preco =  [19.98, 20.00, 23.30, 12.00, 6.99]
 print(mercado)
 print(mercado[0]) # imprime "trigo"
 print(mercado[-1]) # imprime "acucar"
