@@ -1,15 +1,14 @@
-idade = -1
+# -------------------------
+# Atividade 1 - Validação de idade
+# -------------------------
 
+while True:
+    idade = int(input("Digite uma idade válida (0 a 120): "))
 
+    if 0 <= idade <= 120:
+        break
+    else:
+        print("Idade inválida! Tente novamente.")
 
-while idade < 0 or idade > 120:
-    idade = int(input("Digite uma idade válida (0 a 120):"))
-    
-    if idade < 0 or idade > 120:
-        print("Idade Inválida! Tente novamente.")
+print(f"Obrigado! A idade digitada foi {idade}.")
 
-        
-    
-    
-print(f"Obrigado! A idade digitada foi {idade}:  ")
-    
