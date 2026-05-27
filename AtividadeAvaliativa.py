@@ -36,7 +36,7 @@ while True:
             valor_final = valor_original
 
 
-        print("Item:", nome_item)
+        print("Item:", nome_item)           
 
         print("Valor final: R$", valor_final)
 
