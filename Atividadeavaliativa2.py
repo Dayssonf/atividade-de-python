@@ -52,3 +52,4 @@ while True:
     elif opcao == 3:
         print("Encerrando o atendimento... ")
         break
+    
