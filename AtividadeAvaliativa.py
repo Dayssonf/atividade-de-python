@@ -13,7 +13,6 @@ while True:
 
     opcao = int(input("Escolha uma opcao: "))
 
-    # PRODUTOS
 
     if opcao == 1:
 
@@ -27,7 +26,6 @@ while True:
 
         valor_original = preco_produto[escolha]
 
-        # DESCONTO
 
         if valor_original > 300:
 
@@ -37,13 +35,11 @@ while True:
 
             valor_final = valor_original
 
-        # CUPOM
 
         print("Item:", nome_item)
 
         print("Valor final: R$", valor_final)
 
-    # SERVICOS
 
     elif opcao == 2:
 
@@ -58,7 +54,6 @@ while True:
 
         valor_original = preco_servico[escolha]
 
-        # DESCONTO
 
         if valor_original > 300:
 
@@ -68,13 +63,11 @@ while True:
 
             valor_final = valor_original
 
-        # CUPOM
 
         print("Servico:", nome_item)
 
         print("Valor final: R$", valor_final)
 
-    # SAIR
 
     elif opcao == 3:
 
