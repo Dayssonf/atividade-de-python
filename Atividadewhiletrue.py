@@ -11,6 +11,10 @@ while True:
     if menu == "5":
         print("Encerrando o programa... ")
         break
+    if menu not in ["1", "2", "3", "4", "5"]:
+        print("Opção Inválida! Tente novamente")
+        continue
+
     n1 = float(input("Digite um números: "))
     n2 = float(input(" DIgite um número: "))
 
@@ -24,7 +28,7 @@ while True:
         print(f"A Multiplicação é: {n1 * n2}")
 
     elif menu == "4":
-        print(f"A divisão é: {n1 / n2}")
+        print(f"A divisão é: {n1 / n2,2}")
     
     else:
         print("Encerrando...")
