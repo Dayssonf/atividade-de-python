@@ -1,50 +1,73 @@
-class Alunos:
-    def __init__(self, nome, notas):
-
+class Aluno:
+    def __init__(self, nome: str, notas: list = []):
         self.nome = nome
         self.notas = notas
-
+    
     def exibir(self):
-        print(f"Aluno: {self.nome}")
-        if self.notas:
-            for ordem_nota, nota in enumerate(self.notas, 1):
-                print(f"Nota Nº {ordem_nota}: {nota}")
+        print(f"Nome: {self.nome}")
+        if not self.notas:
+            print("Não possui notas lançadas.")
+            return
+        
+        for ordem_nota, nota in enumerate(self.notas, start=1):
+            print(f"Nota nº {ordem_nota}: {nota}")
 
-    def exibir_menu():
-        print("==========")
-        print("1- Cadastrar Aluno: ")
-        print("2- Lanças notas ")
-        print("3- Ver Situação: ")
-        print("4- Listar Alunos: ")
-        print("0 - Sair!")
-        print("==========")
-    
     def situacao(self):
-        media = sum(self.notas) / len(self.notas)
-        if media <=6:
-            print("Reprovado!")
-        elif media >= 7 and media <=10:
-            print("Aprovado!")
-        else:
-            print("Número inválido...")
+        ...
+        # Aqui vocês vão fazer a lógica de somar:
+        self.notas
+        # ... e fazer o cálculo da média.
+        # por fim, dizer se está aprovado ou reprovado
 
+def exibir_menu():
+    print("\n====================")
+    print("1 - Cadastrar aluno")
+    print("2 - Lançar notas")
+    print("3 - Ver situação") 
+    print("4 - Listar alunos")
+    print("0 - Sair")
+    print("====================")
+
+# Opção 1
 def cadastrar_aluno():
-    nome = input("Digite o seu nome: ")
-    aluno = Alunos(nome)
-    aluno.append(aluno)
-    print(f"Aluno {nome} cadastrado com sucesso. ")
+    nome = input("Digite o nome do aluno: ")
+    aluno = Aluno(nome)
+    alunos.append(aluno)
+    print(f"Aluno {nome} cadastrado com sucesso!")
+
+# Opção 2
 def lancar_nota():
-    indice = int(input("Digite o código do aluno: "))
-    aluno = aluno[indice]
-    nota = float(input("Digite a nota para ser lançada: "))
+    codigo_aluno = int(input("Digite o código do aluno: ")) - 1
+    aluno = alunos[codigo_aluno] 
+    nota = float(input("Digite a nota para ser lançado: "))
     aluno.notas.append(nota)
+    print(f"Nota {nota} lançada para o aluno {aluno.nome}")
+
+# Opção 4
+def listar_alunos():
+    if not alunos:
+        print("Não há alunos cadastrados!")
+        return
     
-aluno = []
+    for codigo_aluno, aluno in enumerate(alunos, start=1):
+        print(f"\nCódigo aluno: {codigo_aluno}")
+        aluno.exibir()
+
+alunos = []
+
 while True:
     exibir_menu()
     opcao = input("Escolha uma opção: ")
-
+    
     if opcao == "0":
-        print("encerando...")
-    elif opcao == 1:
-        
+        break
+    elif opcao == "1":
+        cadastrar_aluno()
+    elif opcao == "2":
+        lancar_nota()
+    elif opcao == "3":
+        ...
+    elif opcao == "4":
+        listar_alunos()
+    else:
+        print("Opção Inválida")
